@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    max-width: 1400px;
+    height: 4500px;
+    background-image: url("/img/haikei_pnk.jpg");
+    background-repeat: repeat;
+    position: relative;
+    margin: 0 auto;
+}
+
+.girl-image {
+    width: 250px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 42%;
+    z-index: 1;
+}
+
+.pot {
+    width: 100px;
+    position: absolute;
+    left: 25px;
+    top: 150px;
+}
+
+.clock {
+    width: 100px;
+    position: absolute;
+    right: 25px;
+    top: 400px;
+}
+
+
+.trump-animation {
+    position: relative;
+
+}
+
+.front01 {
+    perspective: 3000px;
+    width: 250px;
+    margin: 0 auto;
+    position: absolute;
+    top: 700px;
+    transform-style: preserve-3d;
+}
+
+.front01 p {
+    position: absolute;
+}
+
+.front01 p:nth-child(1) {
+    display: block;
+    transform: rotateY(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: 0;
+}
+
+.front01 p:nth-child(2) {
+    display: block;
+    transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    right: 0;
+}
+
+
+.front02 {
+    width: 250px;
+    margin: 0 auto;
+    transform: rotate(20deg);
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 1600px;
+    right: 0;
+}
+
+.front02 p {
+    position: absolute;
+}
+
+.front02 p:nth-child(1) {
+    display: block;
+    transform: rotateY(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: 0;
+}
+
+.front02 p:nth-child(2) {
+    display: block;
+    transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    left: 0;
+}
+
+.front03 {
+    width: 250px;
+    margin: 0 auto;
+    transform: rotate(-20deg);
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 2500px;
+}
+
+.front03 p {
+    position: absolute;
+}
+
+
+.front03 p:nth-child(1) {
+    display: block;
+    transform: rotateY(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: 0;
+}
+
+.front03 p:nth-child(2) {
+    display: block;
+    transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    left: 0;
+}
+
+
+.front04 {
+    width: 250px;
+    margin: 0 auto;
+    transform: rotate(20deg);
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 3400px;
+    right: 0;
+}
+
+.front04 p {
+    position: absolute;
+}
+
+
+.front04 p:nth-child(1) {
+    display: block;
+    transform: rotateY(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: 0;
+}
+
+.front04 p:nth-child(2) {
+    display: block;
+    transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    left: 0;
+}
+
+.back {
+    width: 220px;
+    margin: 0 auto;
+    transform: rotate(20deg);
+    position: absolute;
+    top: 700px;
+}
+
+.back02 {
+    width: 250px;
+    margin: 0 auto;
+    transform: rotate(20deg);
+    position: absolute;
+    top: 1600px;
+    right: 0;
+}
+
+.back03 {
+    width: 250px;
+    margin: 0 auto;
+    transform: rotate(-20deg);
+    position: absolute;
+    top: 2500px;
+
+}
+
+.back04 {
+    width: 250px;
+    margin: 0 auto;
+    transform: rotate(20deg);
+    position: absolute;
+    top: 3400px;
+    right: 0;
+}
+
+.swirl {
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.changed {
+    width: 100px;
+    transition: 0.3s;
+    left: 47%;
+    animation: spin 1.5s linear infinite;
+    transition: 2s;
+    opacity: 0;
+
+}
+
+.key {
+    width: 120px;
+    position: absolute;
+    left: 25px;
+    top: 4000px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.bound {
+    animation: bound 1.6s linear infinite;
+    transform-origin: 100% 100%;
+    margin: 1rem 0 !important;
+}
+
+@keyframes bound {
+    0% {
+        transform: translateY(0)
+    }
+
+    33.33333% {
+        transform: translateY(-10px)
+    }
+
+    66.66667% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+/*レスポンシブ*/
+
+@media screen and (max-width:1024px) {
+    .girl-image {
+        width: 20%;
+        left: 40%;
+    }
+
+    .pot {
+        width: 15%;
+        position: absolute;
+        left: 25px;
+        top: 200px;
+    }
+
+    .clock {
+        width: 15%;
+        position: absolute;
+        right: 25px;
+        top: 500px;
+    }
+
+    .front01 {
+        width: 25%;
+        margin: 0 auto;
+        position: absolute;
+        top: 700px;
+    }
+
+    .front02 {
+        width: 25%;
+        margin: 0 auto;
+        transform: rotate(20deg);
+        position: absolute;
+        top: 1600px;
+        right: 0;
+    }
+
+    .front03 {
+        width: 25%;
+        margin: 0 auto;
+        transform: rotate(-20deg);
+        position: absolute;
+        top: 2500px;
+    }
+
+    .front04 {
+        width: 25%;
+        margin: 0 auto;
+        transform: rotate(20deg);
+        position: absolute;
+        top: 3400px;
+        right: 0;
+    }
+
+    .key {
+        width: 15%;
+        position: absolute;
+        left: 25px;
+        top: 4000px;
+    }
+
+    .swirl {
+        width: 30%;
+        position: absolute;
+        bottom: 60px;
+        left: 35%;
+    }
+
+
+
+}
